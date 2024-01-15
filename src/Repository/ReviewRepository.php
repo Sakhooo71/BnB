@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\Room;
+use App\Entity\Review;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Room>
+ * @extends ServiceEntityRepository<Review>
  *
- * @method Room|null find($id, $lockMode = null, $lockVersion = null)
- * @method Room|null findOneBy(array $criteria, array $orderBy = null)
- * @method Room[]    findAll()
- * @method Room[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Review|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Review|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Review[]    findAll()
+ * @method Review[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class RoomRepository extends ServiceEntityRepository
+class ReviewRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Room::class);
+        parent::__construct($registry, Review::class);
     }
 
 //    /**
-//     * @return Room[] Returns an array of Room objects
+//     * @return Review[] Returns an array of Review objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class RoomRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Room
+//    public function findOneBySomeField($value): ?Review
 //    {
 //        return $this->createQueryBuilder('r')
 //            ->andWhere('r.exampleField = :val')

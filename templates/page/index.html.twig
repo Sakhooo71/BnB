@@ -1,20 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PageController!{% endblock %}
+{% block title %}Paris
+{% endblock %}
+
+{% set paragraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit consequatur et repellat earum, ex provident illo iure! Aliquam vitae enim eligendi in quidem ullam tempora beatae est quae animi!' %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/sakho/Desktop/Symfony/BnB/src/Controller/PageController.php'|file_link(0) }}">src/Controller/PageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/sakho/Desktop/Symfony/BnB/templates/page/index.html.twig'|file_link(0) }}">templates/page/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<div class="container-fluid vh-100 bg-body-tertiary">
+		<div class="d-flex justify-content-center align-items-center pt-5">
+            <div class="card col-4 text-center rounded-4 shadow-lg p-4 d-flex align-items-center justify-content-center">
+            	<img src={{ asset('/images/default-1.jpg') }} 
+                width="200" class="border-2 border-light rounded-circle shadow">
+	            <h1>Paris</h1>
+                <p>{{ paragraph|slice(1,150) }}...</p>
+                <p>&copy; {{ 'now'|date('Y') }}</p>
+            </div>
+        </div>
+	</div>
 {% endblock %}

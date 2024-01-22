@@ -17,6 +17,9 @@
 .bg-dark {
     background-color: var(--custom-dark) !important;
 }
+.text-main {
+    color: var(--custom-main) !important;
+}
 
 /* Titles & Fonts */
 h1, h2, h3, h4, h5, h6 {
@@ -80,10 +83,12 @@ footer {
 .card-host-info img {
     width: 32px;
 }
-/* Pagination  */
+
+/* Pagination */
 .pagination {
     --bs-pagination-border-width: 0;
 }
-.pagination>.page-link,  .page-link.active {
+
+.active>.page-link, .page-link.active {
     background-color: var(--custom-dark);
 }
